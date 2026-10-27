@@ -78,15 +78,15 @@ def footer(c, doc):
     c.saveState()
     c.setFont('DV', 7.5)
     c.setFillColor(colors.HexColor('#777777'))
-    c.drawString(18 * mm, 10 * mm, t('Fusion Sac Açınım / Nesting — kullanım kılavuzu (sürüm %s)',
-                                     'Fusion Sheet Metal Nesting — user guide (version %s)') % VER)
+    c.drawString(18 * mm, 10 * mm, t('Autodesk Fusion için Sac Açınım / Nesting — kullanım kılavuzu (sürüm %s)',
+                                     'Sheet Metal Nesting for Autodesk Fusion — user guide (version %s)') % VER)
     c.drawRightString(A4[0] - 18 * mm, 10 * mm, str(doc.page))
     c.restoreState()
 
 
 def story():
-    s = [p(t('Fusion Sac Açınım / Nesting', 'Fusion Sheet Metal Nesting'), H1),
-         p(t('Fusion eklentisi — kullanım kılavuzu, sürüm %s', 'Fusion add-in — user guide, version %s') % VER, SMALL),
+    s = [p(t('Sac Açınım / Nesting', 'Sheet Metal Nesting'), H1),
+         p(t('Autodesk® Fusion™ için eklenti — kullanım kılavuzu, sürüm %s', 'An add-in for Autodesk® Fusion™ — user guide, version %s') % VER, SMALL),
          Spacer(1, 6)]
     s += [p(t('Ne işe yarar?', 'What does it do?'), H2),
           p(t('Fusion\'da sheet metal ile çizdiğin parçaları tek tuşla lazer kesime hazırlar:',
@@ -113,9 +113,9 @@ def story():
                       'Only <b>visible</b> bodies are taken. Hide the ones you want left out in the Browser.'),
                     t('Farklı kalınlıktaki parçalar otomatik olarak gruplanır; her kalınlık kendi levhasına dizilir.',
                       'Parts of different thicknesses are grouped automatically; each thickness is nested on its own sheet.'),
-                    t('Çıktılar: <b>Belgeler &gt; Fusion_Sac_DXF &gt; &lt;belge adı&gt;_&lt;tarih-saat&gt;</b>. Her çalıştırma '
+                    t('Çıktılar: <b>Belgeler &gt; Sac_Acinim_DXF &gt; &lt;belge adı&gt;_&lt;tarih-saat&gt;</b>. Her çalıştırma '
                       'yeni bir klasör açar, eskiler silinmez. İş bitince klasör kendiliğinden açılır.',
-                      'Output: <b>Documents &gt; Fusion_SheetMetal_DXF &gt; &lt;document&gt;_&lt;date-time&gt;</b>. Each run '
+                      'Output: <b>Documents &gt; SheetMetal_Nesting_DXF &gt; &lt;document&gt;_&lt;date-time&gt;</b>. Each run '
                       'makes a new folder; old ones are kept. The folder opens by itself when the run ends.')])]
     s += [p(t('Pencere, yukarıdan aşağı', 'The dialog, top to bottom'), H2),
           p(t('Fusion\'da <b>SHEET METAL</b> sekmesinde (ayrıca UTILITIES &gt; ADD-INS altında) butona bas. Ayarların '
@@ -308,6 +308,10 @@ def story():
               'This software is provided "as is" under the MIT License, without warranty of any kind. It may contain bugs. '
               'Check every DXF\'s dimensions before cutting; you are responsible for what you cut, the material and using '
               'your laser safely.'), NOTE),
+          p(t('Autodesk ve Fusion, Autodesk, Inc.\'in ABD\'de ve diğer ülkelerde tescilli markaları ya da markalarıdır. Bu bağımsız '
+              'bir projedir; Autodesk, Inc. ile bağlantılı değildir, onun tarafından desteklenmez ya da onaylanmaz.',
+              'Autodesk and Fusion are registered trademarks or trademarks of Autodesk, Inc., in the USA and other countries. '
+              'This is an independent project, not affiliated with, sponsored or endorsed by Autodesk, Inc.'), SMALL),
           Spacer(1, 4), p(datetime.date.today().strftime('%d.%m.%Y'), SMALL)]
     return s
 
@@ -315,7 +319,7 @@ def story():
 for LANG, name in (('en', 'USER_GUIDE.pdf'), ('tr', 'KULLANIM.pdf')):
     out = os.path.join(ROOT, 'docs', name)
     doc = SimpleDocTemplate(out, pagesize=A4, leftMargin=18 * mm, rightMargin=18 * mm, topMargin=16 * mm, bottomMargin=16 * mm,
-                            title=t('Fusion Sac Açınım / Nesting — kullanım kılavuzu', 'Fusion Sheet Metal Nesting — user guide'),
+                            title=t('Autodesk Fusion için Sac Açınım / Nesting — kullanım kılavuzu', 'Sheet Metal Nesting for Autodesk Fusion — user guide'),
                             author='barisegemenbas')
     doc.build(story(), onFirstPage=footer, onLaterPages=footer)
     print('written', out)

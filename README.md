@@ -1,16 +1,16 @@
-# Fusion Sheet Metal Nesting
+# Sheet Metal Nesting for Autodesk Fusion
 
-**Flatten, nest and cut — in one click.** An Autodesk Fusion add-in that flattens every visible sheet metal body,
+**Flatten, nest and cut — in one click.** An add-in for Autodesk® Fusion™ that flattens every visible sheet metal body,
 writes a DXF per part and nests them all on sheets with as little scrap as it can. Works for **sheet metal**
 (laser + press brake) and for **model making** (greyboard, foam board, paper, PP, acrylic, plywood).
 
-[![Latest release](https://img.shields.io/github/v/release/barisegemenbas/fusion-sheet-metal-nesting)](https://github.com/barisegemenbas/fusion-sheet-metal-nesting/releases/latest)
+[![Latest release](https://img.shields.io/github/v/release/barisegemenbas/sheet-metal-nesting-for-fusion)](https://github.com/barisegemenbas/sheet-metal-nesting-for-fusion/releases/latest)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-lightgrey)
 ![Language](https://img.shields.io/badge/UI-English%20%7C%20T%C3%BCrk%C3%A7e-informational)
 
-[Türkçe](README.tr.md) · [Download](https://github.com/barisegemenbas/fusion-sheet-metal-nesting/releases/latest) ·
-[User guide (PDF)](docs/USER_GUIDE.pdf) · [Report a problem](https://github.com/barisegemenbas/fusion-sheet-metal-nesting/issues)
+[Türkçe](README.tr.md) · [Download](https://github.com/barisegemenbas/sheet-metal-nesting-for-fusion/releases/latest) ·
+[User guide (PDF)](docs/USER_GUIDE.pdf) · [Report a problem](https://github.com/barisegemenbas/sheet-metal-nesting-for-fusion/issues)
 
 <p align="center">
   <img src="docs/images/sheet_metal_nesting.png" width="46%" alt="Sheet metal parts nested with red bend lines">
@@ -37,8 +37,8 @@ writes a DXF per part and nests them all on sheets with as little scrap as it ca
 
 ## Install
 
-1. Download `fusion-sheet-metal-nesting-v1.0.0.zip` from the
-   [latest release](https://github.com/barisegemenbas/fusion-sheet-metal-nesting/releases/latest).
+1. Download `sheet-metal-nesting-for-fusion-v1.0.0.zip` from the
+   [latest release](https://github.com/barisegemenbas/sheet-metal-nesting-for-fusion/releases/latest).
 2. **Mac:** double-click the zip, then `Install-Mac.command`. **Windows:** right-click the zip > *Extract All*,
    then `Install-Windows.bat`.
 3. Restart Fusion. The button is on the **SHEET METAL** tab.
@@ -68,7 +68,7 @@ Then *UTILITIES > ADD-INS > Scripts and Add-Ins > Add-Ins*, select SacAcinimDXF,
 ## Use
 
 Open a sheet metal design, click the button, pick the material and sheet for each thickness, and press OK. The
-output folder (`Documents/Fusion_SheetMetal_DXF/<document>_<date>`) opens when it is done:
+output folder (`Documents/SheetMetal_Nesting_DXF/<document>_<date>`) opens when it is done:
 
 | File | What |
 |---|---|
@@ -102,7 +102,7 @@ The [user guide](docs/USER_GUIDE.pdf) covers every setting, the colours, scrap a
 This software is provided **"as is", without warranty of any kind** (see the [MIT License](LICENSE)). It may
 contain bugs. **Always check the dimensions of every DXF before cutting.** You are responsible for what you cut,
 for your material and for using your laser safely. Never laser-cut PVC / Forex: it gives off toxic chlorine gas.
-Cost figures are estimates from the prices you enter. This project is not affiliated with or endorsed by Autodesk.
+Cost figures are estimates from the prices you enter.
 
 ## Contributing
 
@@ -121,6 +121,12 @@ problem, please attach the `_log.txt` from the output folder and a screenshot.
 | [python-build-standalone](https://github.com/astral-sh/python-build-standalone) | the installer's portable Python | MPL-2.0 / PSF |
 
 These are installed from PyPI by the installer; none of their code is included in this repository.
+
+## Trademarks
+
+Autodesk and Fusion are registered trademarks or trademarks of Autodesk, Inc., in the USA and other countries.
+The names are used here only to say which software this add-in works with. This is an independent project, not
+affiliated with, sponsored or endorsed by Autodesk, Inc. No Autodesk logos or icons are used.
 
 ## License
 

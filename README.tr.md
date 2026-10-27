@@ -1,11 +1,11 @@
-# Fusion Sac Açınım / Nesting
+# Autodesk Fusion için Sac Açınım / Nesting
 
-**Açınım, dizim, kesim — tek tıkla.** Autodesk Fusion eklentisi: görünür her sheet metal gövdenin açınımını
+**Açınım, dizim, kesim — tek tıkla.** Autodesk® Fusion™ için bir eklenti: görünür her sheet metal gövdenin açınımını
 çıkarır, her parçayı DXF yapar ve hepsini levhaya en az fireyle dizer. **Sac metal** (lazer + abkant) ve **maket**
 (mukavva, kapa, kağıt, PP, pleksi, kontrplak) için.
 
-[English](README.md) · [İndir](https://github.com/barisegemenbas/fusion-sheet-metal-nesting/releases/latest) ·
-[Kullanım kılavuzu (PDF)](docs/KULLANIM.pdf) · [Sorun bildir](https://github.com/barisegemenbas/fusion-sheet-metal-nesting/issues)
+[English](README.md) · [İndir](https://github.com/barisegemenbas/sheet-metal-nesting-for-fusion/releases/latest) ·
+[Kullanım kılavuzu (PDF)](docs/KULLANIM.pdf) · [Sorun bildir](https://github.com/barisegemenbas/sheet-metal-nesting-for-fusion/issues)
 
 <p align="center">
   <img src="docs/images/sheet_metal_nesting.png" width="46%" alt="Kırmızı büküm çizgileriyle dizilmiş sac parçalar">
@@ -29,8 +29,8 @@
 
 ## Kurulum
 
-1. [Son sürümden](https://github.com/barisegemenbas/fusion-sheet-metal-nesting/releases/latest)
-   `fusion-sheet-metal-nesting-v1.0.0.zip` dosyasını indir.
+1. [Son sürümden](https://github.com/barisegemenbas/sheet-metal-nesting-for-fusion/releases/latest)
+   `sheet-metal-nesting-for-fusion-v1.0.0.zip` dosyasını indir.
 2. **Mac:** zip'e çift tıkla, sonra `Install-Mac.command`. **Windows:** zip'e sağ tık > *Tümünü ayıkla*, sonra
    `Install-Windows.bat`.
 3. Fusion'ı yeniden başlat. Buton **SHEET METAL** sekmesinde.
@@ -43,7 +43,7 @@ Gizlilik ve Güvenlik > Yine de Aç*, Windows'ta *Ek bilgi > Yine de çalıştı
 ## Kullanım
 
 Sheet metal bir tasarım açıkken butona bas, her kalınlık için malzemeyi ve levhayı seç, OK de. Bitince çıktı
-klasörü (`Belgeler/Fusion_Sac_DXF/<belge>_<tarih>`) açılır:
+klasörü (`Belgeler/Sac_Acinim_DXF/<belge>_<tarih>`) açılır:
 
 | Dosya | Ne |
 |---|---|
@@ -74,12 +74,18 @@ Her ayar, renkler, fire, maliyet ve sorunlar: [kullanım kılavuzu](docs/KULLANI
 Bu yazılım **"olduğu gibi", hiçbir garanti olmadan** sunulur ([MIT Lisansı](LICENSE)). Hatalar olabilir.
 **Kesmeden önce her DXF'in ölçüsünü kontrol et.** Kestiğin şeyden, malzemeden ve lazeri güvenli kullanmaktan sen
 sorumlusun. PVC / foreks lazerde asla kesilmez: zehirli klor gazı çıkar. Maliyetler girdiğin fiyatlara göre
-tahmindir. Bu proje Autodesk ile bağlantılı değildir.
+tahmindir.
 
 ## Katkı
 
 Hata bildirimi, fikir ve pull request'ler açık: [CONTRIBUTING.md](CONTRIBUTING.md). Sorun bildirirken çıktı
 klasöründeki `_log.txt`'yi ve bir ekran görüntüsünü ekle.
+
+## Markalar
+
+Autodesk ve Fusion, Autodesk, Inc.'in ABD'de ve diğer ülkelerde tescilli markaları ya da markalarıdır. Bu adlar
+burada yalnız eklentinin hangi yazılımla çalıştığını söylemek için kullanılır. Bu bağımsız bir projedir; Autodesk,
+Inc. ile bağlantılı değildir, onun tarafından desteklenmez ya da onaylanmaz. Autodesk logosu ya da simgesi kullanılmaz.
 
 ## Lisans
 

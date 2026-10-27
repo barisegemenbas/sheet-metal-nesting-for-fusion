@@ -397,8 +397,8 @@ def export_all(gap, do_nest, keep_separate, sheets, styles=None, legend=True, me
     if not design:
         ui.messageBox(L('Aktif bir tasarım yok.')); return
     doc_name = safe(app.activeDocument.name)
-    # Documents/Fusion_Sac_DXF (Turkish) or Documents/Fusion_SheetMetal_DXF (English)
-    out = os.path.join(os.path.expanduser('~'), 'Documents', L('Fusion_Sac_DXF'), '%s_%s' % (doc_name, datetime.datetime.now().strftime('%Y%m%d_%H%M')))
+    # Documents/Sac_Acinim_DXF (Turkish) or Documents/SheetMetal_Nesting_DXF (English)
+    out = os.path.join(os.path.expanduser('~'), 'Documents', L('Sac_Acinim_DXF'), '%s_%s' % (doc_name, datetime.datetime.now().strftime('%Y%m%d_%H%M')))
     os.makedirs(out, exist_ok=True)
     LOG = os.path.join(out, '_log.txt')
     log('BELGE %s | eklenti surumu %s' % (app.activeDocument.name, version()))

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Fusion Sheet Metal Nesting — Mac installer. Double-click it; it does the rest.
+# Sheet Metal Nesting for Autodesk Fusion — Mac installer. Double-click it; it does the rest.
 # Copies the add-in into Fusion's add-ins folder, puts its own portable Python (python-build-standalone, no admin
 # password needed) inside the add-in and installs the packages it needs there. Running it again updates the add-in
 # and keeps the user's settings and prices.
@@ -22,7 +22,7 @@ finish() { echo; if [ "$TR" = 1 ]; then read -r -p "Kapatmak için Enter'a bas..
 fail() { echo; say "HATA: $1" "ERROR: $2"; say "Bu pencerenin ekran görüntüsünü al ve GitHub'da bir issue aç." \
     "Take a screenshot of this window and open an issue on GitHub."; finish 1; }
 
-say "== Fusion Sac Açınım / Nesting kurulumu ==" "== Fusion Sheet Metal Nesting setup =="
+say "== Autodesk Fusion için Sac Açınım / Nesting kurulumu ==" "== Sheet Metal Nesting for Autodesk Fusion — setup =="
 echo
 [ -f "$SRC/SacAcinimDXF.py" ] || fail "SacAcinimDXF klasörü bulunamadı. Zip'i açıp bu dosyayı açılan klasörün içinden çalıştır." \
     "SacAcinimDXF folder not found. Unzip the download and run this file from the unzipped folder."
@@ -77,5 +77,5 @@ if [ -n "$MISSING" ]; then
 fi
 echo
 say "Fusion açıksa kapatıp yeniden aç. SHEET METAL sekmesinde 'Sac Açınım DXF' butonu çıkar." \
-    "Restart Fusion if it is open. The 'Sheet Metal Nesting DXF' button appears on the SHEET METAL tab."
+    "Restart Fusion if it is open. The 'Sheet Metal Nesting' button appears on the SHEET METAL tab."
 finish 0

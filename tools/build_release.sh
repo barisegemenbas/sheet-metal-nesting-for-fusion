@@ -1,10 +1,10 @@
 #!/bin/bash
-# Builds dist/fusion-sheet-metal-nesting-v<version>.zip: the add-in, both installers and the docs, ready to attach to
+# Builds dist/sheet-metal-nesting-for-fusion-v<version>.zip: the add-in, both installers and the docs, ready to attach to
 # a GitHub release. Run on a Mac from the repository: bash tools/build_release.sh
 set -eu
 cd "$(dirname "$0")/.."
 VER=$(python3 -c "import json; print(json.load(open('SacAcinimDXF/SacAcinimDXF.manifest'))['version'])")
-NAME="fusion-sheet-metal-nesting-v$VER"
+NAME="sheet-metal-nesting-for-fusion-v$VER"
 STAGE="build/$NAME"
 rm -rf build
 mkdir -p "$STAGE" dist

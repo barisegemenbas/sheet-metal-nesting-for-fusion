@@ -1,5 +1,5 @@
 @echo off
-rem Fusion Sheet Metal Nesting - Windows installer. Double-click it; it does the rest.
+rem Sheet Metal Nesting for Autodesk Fusion - Windows installer. Double-click it; it does the rest.
 rem Copies the add-in into Fusion's add-ins folder, puts its own portable Python (python-build-standalone, no admin
 rem rights needed) inside the add-in and installs the packages it needs there. Running it again updates the add-in
 rem and keeps the user's settings and prices. Messages are in English and plain-ASCII Turkish: old consoles garble
@@ -13,7 +13,7 @@ set "URL=https://github.com/astral-sh/python-build-standalone/releases/download/
 set "PY=%DEST%\_python\python.exe"
 set "LOG=%DEST%\_install.log"
 
-echo == Fusion Sheet Metal Nesting setup / kurulum ==
+echo == Sheet Metal Nesting for Autodesk Fusion - setup / kurulum ==
 echo.
 if not exist "%SRC%\SacAcinimDXF.py" goto :no_source
 if not defined SAC_TARGET if not exist "%APPDATA%\Autodesk" goto :no_fusion

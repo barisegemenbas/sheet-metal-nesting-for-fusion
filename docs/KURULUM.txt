@@ -1,5 +1,5 @@
-FUSION SAC AÇINIM / NESTING — kurulum
-=====================================
+AUTODESK FUSION İÇİN SAC AÇINIM / NESTING — kurulum
+===================================================
 
 Ne yapar: Fusion'daki görünür sheet metal gövdelerin açınımını çıkarır, her parçayı DXF yapar ve hepsini
 levhaya dizer (nesting). Sac metal ve maket (karton, kapa, pleksi, ahşap) için lazer kesim dosyası, PNG
@@ -35,7 +35,7 @@ KULLANIM
 --------
 Fusion'da SHEET METAL sekmesinde "Sac Açınım DXF" butonu çıkar (ayrıca UTILITIES > ADD-INS altında).
 Bir sheet metal tasarımı açıkken butona bas, pencerede ayarları seç, OK de.
-Çıktılar: Belgeler > Fusion_Sac_DXF > <belge adı>_<tarih>  (İngilizce seçiliyse Fusion_SheetMetal_DXF)
+Çıktılar: Belgeler > Sac_Acinim_DXF > <belge adı>_<tarih>  (İngilizce seçiliyse SheetMetal_Nesting_DXF)
 Dil: pencerenin en üstündeki "Dil / Language".
 Ayarların üstüne fareyle gelince ne işe yaradıkları yazar.
 Ayrıntılı anlatım (adım adım, lazer programında renkler, fire ve maliyet, sorunlar): KULLANIM.pdf
@@ -67,3 +67,6 @@ BİLİNEN SINIRLAR
 
 Bu yazılım "olduğu gibi", hiçbir garanti olmadan sunulur (MIT Lisansı). Kesmeden önce her DXF'in ölçüsünü
 kontrol et; kestiğin şeyden ve lazeri güvenli kullanmaktan sen sorumlusun.
+
+Autodesk ve Fusion, Autodesk, Inc.'in ABD'de ve diğer ülkelerde tescilli markaları ya da markalarıdır.
+Bu bağımsız bir projedir; Autodesk, Inc. ile bağlantılı değildir, onun tarafından desteklenmez ya da onaylanmaz.

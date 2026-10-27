@@ -26,7 +26,7 @@ def num(v, fmt='%g'):
 
 EN = {
     # add-in, dialog
-    'Sac Açınım DXF': 'Sheet Metal Nesting DXF',
+    'Sac Açınım DXF': 'Sheet Metal Nesting',
     'Görünür tüm sheet metal gövdeleri flat pattern yapıp DXF + nesting çıkarır.':
         'Flattens every visible sheet metal body and writes DXFs plus a nested layout.',
     'SacAcinimDXF yüklenemedi:\n': 'SacAcinimDXF could not load:\n',
@@ -114,7 +114,7 @@ EN = {
     'Kapalıysa bu çizgiler çıktıya girmez.': 'Off: these lines are left out of the output.',
     '   rengi': '   colour',
     '   çizgisi': '   line type',
-    'Sac Açınım DXF  sürüm %s': 'Sheet Metal Nesting DXF  version %s',
+    'Sac Açınım DXF  sürüm %s': 'Sheet Metal Nesting  version %s',
     'En az bir çıktı seçilmeli (Çıktılar bölmesi).': 'Pick at least one output (Outputs section).',
     'En az bir kalınlık dahil edilmeli.': 'Include at least one thickness.',
     # outputs
@@ -192,7 +192,7 @@ EN = {
     # run (sac_core)
     'Aktif bir tasarım yok.': 'No active design.',
     'Dahil edilen kalınlıkta parça yok.': 'No parts in the included thicknesses.',
-    'Fusion_Sac_DXF': 'Fusion_SheetMetal_DXF',
+    'Sac_Acinim_DXF': 'SheetMetal_Nesting_DXF',
     '\nSistem Python bulunamadı (ezdxf gerekli): DXF yazılamadı/dizilemedi.':
         '\nNo Python with ezdxf found: DXFs were not written or nested. Run the installer again.',
     'İptal (hızlı dikdörtgen dizilim)': 'Cancel (fast rectangle nesting)',
@@ -214,7 +214,7 @@ EN = {
     '. Asıl tasarım değişmedi.': '. Your design was not changed.',
     '\n\nDahil edilmeyen: %d parça': '\n\nLeft out: %d parts',
     '%d parça DXF olarak aktarıldı%s.%s%s\n\nKlasör:\n%s\n\nSac Açınım DXF sürüm %s':
-        '%d parts written as DXF%s.%s%s\n\nFolder:\n%s\n\nSheet Metal Nesting DXF version %s',
+        '%d parts written as DXF%s.%s%s\n\nFolder:\n%s\n\nSheet Metal Nesting version %s',
     ', %d hata (%s)': ', %d failed (%s)',
     '_KALINLIK_DEGISMEDI': '_THICKNESS_UNCHANGED',
     # nesting (nest_dxf)

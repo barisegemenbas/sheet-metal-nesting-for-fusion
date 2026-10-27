@@ -4,7 +4,7 @@ Thanks for helping! Issues and pull requests are welcome in English or Turkish.
 
 ## Reporting a problem
 
-Open an [issue](https://github.com/barisegemenbas/fusion-sheet-metal-nesting/issues/new/choose) and include:
+Open an [issue](https://github.com/barisegemenbas/sheet-metal-nesting-for-fusion/issues/new/choose) and include:
 
 - your system (macOS / Windows, Apple silicon or Intel) and the add-in version (bottom of its dialog);
 - what you did and what happened, with a screenshot of any error;

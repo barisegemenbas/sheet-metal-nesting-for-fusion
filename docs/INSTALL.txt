@@ -1,5 +1,5 @@
-FUSION SHEET METAL NESTING — installation
-=========================================
+SHEET METAL NESTING FOR AUTODESK FUSION — installation
+=====================================================
 
 What it does: flattens the visible sheet metal bodies in Fusion, writes a DXF per part and nests them all on
 sheets. For sheet metal and for model making (card, foam board, acrylic, wood): laser-ready cut files, PNG
@@ -33,9 +33,9 @@ WINDOWS
 
 USING IT
 --------
-The "Sheet Metal Nesting DXF" button is on the SHEET METAL tab (also under UTILITIES > ADD-INS).
+The "Sheet Metal Nesting" button is on the SHEET METAL tab (also under UTILITIES > ADD-INS).
 With a sheet metal design open, click it, choose the settings and press OK.
-Output: Documents > Fusion_SheetMetal_DXF > <document name>_<date>
+Output: Documents > SheetMetal_Nesting_DXF > <document name>_<date>
 Hover over any setting to see what it does. Language: "Dil / Language" at the top of the dialog.
 Full guide (step by step, laser colours, scrap and cost, troubleshooting): USER_GUIDE.pdf
 
@@ -66,3 +66,6 @@ KNOWN LIMITS
 
 This software is provided "as is", without warranty of any kind (MIT License). Check every DXF's dimensions
 before cutting; you are responsible for what you cut and for using your laser safely.
+
+Autodesk and Fusion are registered trademarks or trademarks of Autodesk, Inc., in the USA and other countries.
+This is an independent project, not affiliated with, sponsored or endorsed by Autodesk, Inc.
