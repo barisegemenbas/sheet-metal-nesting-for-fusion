@@ -3,6 +3,11 @@
 # parts.json: {"sheet_w": 2500, "sheet_h": 1250, "gap": 10, "parts": [{"name": .., "dxf": .., "qty": 1}],
 #              "styles": {layer: {"label", "show", "color", "ltype"}}, "legend": true}
 import json, sys, os, math, datetime
+# Output is always UTF-8: on Windows a piped stdout is cp1252, and the Turkish summary lines ("OZET ...") would stop
+# the run with UnicodeEncodeError before the nesting DXF is written. sac_core reads the pipe as UTF-8.
+for _s in (sys.stdout, sys.stderr):
+    try: _s.reconfigure(encoding='utf-8', errors='replace')
+    except Exception: pass
 import ezdxf
 from ezdxf import bbox
 from ezdxf.addons import Importer

@@ -600,7 +600,8 @@ def export_all(gap, do_nest, keep_separate, sheets, styles=None, legend=True, me
                                'styles': styles or {}, 'legend': legend, 'method': how,
                                'png': png, **(opts or {})}, f, ensure_ascii=False)
                 proc = subprocess.Popen([py, os.path.join(HERE, 'nest_dxf.py'), cfg, '-'], stdout=subprocess.PIPE,
-                                        stderr=subprocess.PIPE, text=True, env=clean_env(),
+                                        stderr=subprocess.PIPE, text=True, encoding='utf-8', errors='replace',
+                                        env=clean_env(),
                                         creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
                 t0 = time.time()
                 while proc.poll() is None:
