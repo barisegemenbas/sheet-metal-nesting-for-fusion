@@ -1,0 +1,11 @@
+{
+  "autodeskProduct": "Fusion",
+  "type": "addin",
+  "id": "c8dd2760-c3a5-4c94-8124-494b7016450d",
+  "author": "barisegemenbas",
+  "description": {"": "Flattens sheet metal bodies, writes DXFs and nests them on sheets (sheet metal and model making)."},
+  "version": "1.0.0",
+  "runOnStartup": true,
+  "supportedOS": "windows|mac",
+  "editEnabled": true
+}

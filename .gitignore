@@ -1,0 +1,13 @@
+# per-user files the add-in writes next to itself
+SacAcinimDXF/_python/
+SacAcinimDXF/_ayarlar.json
+SacAcinimDXF/_fiyatlar.json
+SacAcinimDXF/_yuz_hafiza.json
+SacAcinimDXF/_install.log
+__pycache__/
+*.pyc
+.DS_Store
+# build output
+dist/
+build/
+docs/images/_crop_*

@@ -1,0 +1,6 @@
+# Windows batch files must keep CRLF line ends; the Mac installer must keep LF
+*.bat text eol=crlf
+*.command text eol=lf
+*.sh text eol=lf
+*.pdf binary
+*.png binary

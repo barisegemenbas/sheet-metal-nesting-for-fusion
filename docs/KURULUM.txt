@@ -1,0 +1,69 @@
+FUSION SAC AÇINIM / NESTING — kurulum
+=====================================
+
+Ne yapar: Fusion'daki görünür sheet metal gövdelerin açınımını çıkarır, her parçayı DXF yapar ve hepsini
+levhaya dizer (nesting). Sac metal ve maket (karton, kapa, pleksi, ahşap) için lazer kesim dosyası, PNG
+önizleme, fire ve isteğe bağlı maliyet hesabı verir.
+
+Gerekenler: Autodesk Fusion (en az bir kez açılmış olsun) ve internet. Kurulum 3-5 dakika sürer, yaklaşık
+300-400 MB yer kaplar. Yönetici şifresi gerekmez; ayrıca Python kurmana gerek yok, kurulum kendisi getirir.
+
+
+MAC
+---
+1. Zip dosyasına çift tıkla; yanında bir klasör açılır.
+2. Klasörün içindeki "Install-Mac.command" dosyasına çift tıkla.
+3. İlk seferde Mac "açılamıyor, geliştirici doğrulanamadı" der (dosya imzasız olduğu için):
+     - "Tamam" de.
+     - Sistem Ayarları > Gizlilik ve Güvenlik'i aç, aşağıdaki engellendi yazısının yanındaki
+       "Yine de Aç" düğmesine bas, sorarsa Mac şifreni gir. (Yazı "Install-Mac.command engellendi" der.)
+     - Install-Mac.command'a tekrar çift tıkla, "Aç" de.
+4. Terminal penceresi açılır ve kurulum kendi kendine ilerler. "KURULUM TAMAM" yazınca Enter'a bas.
+5. Fusion açıksa kapatıp yeniden aç.
+
+
+WINDOWS
+-------
+1. Zip dosyasına sağ tıkla > "Tümünü ayıkla" > "Ayıkla". (Zip'e çift tıklayıp içinden çalıştırma; çalışmaz.)
+2. Açılan klasördeki "Install-Windows.bat" dosyasına çift tıkla.
+3. "Windows bilgisayarınızı korudu" uyarısı çıkarsa: "Ek bilgi" > "Yine de çalıştır".
+4. Siyah pencerede kurulum kendi kendine ilerler. "KURULUM TAMAM" yazınca bir tuşa bas.
+5. Fusion açıksa kapatıp yeniden aç.
+
+
+KULLANIM
+--------
+Fusion'da SHEET METAL sekmesinde "Sac Açınım DXF" butonu çıkar (ayrıca UTILITIES > ADD-INS altında).
+Bir sheet metal tasarımı açıkken butona bas, pencerede ayarları seç, OK de.
+Çıktılar: Belgeler > Fusion_Sac_DXF > <belge adı>_<tarih>  (İngilizce seçiliyse Fusion_SheetMetal_DXF)
+Dil: pencerenin en üstündeki "Dil / Language".
+Ayarların üstüne fareyle gelince ne işe yaradıkları yazar.
+Ayrıntılı anlatım (adım adım, lazer programında renkler, fire ve maliyet, sorunlar): KULLANIM.pdf
+
+Buton görünmüyorsa: UTILITIES > ADD-INS > Scripts and Add-Ins > Add-Ins sekmesinde "SacAcinimDXF"i seç,
+"Run" de ve "Run on Startup" kutusunu işaretle.
+
+
+GÜNCELLEME
+----------
+Yeni sürümün zip'ini aç ve kurulum dosyasını yine çalıştır. Ayarların ve fiyatların korunur.
+Kullandığın sürüm, eklenti penceresinin en altında yazar.
+
+
+KALDIRMA
+--------
+Fusion'ı kapat ve şu klasörü sil:
+  Mac:     ~/Library/Application Support/Autodesk/Autodesk Fusion 360/API/AddIns/SacAcinimDXF
+  Windows: %APPDATA%\Autodesk\Autodesk Fusion 360\API\AddIns\SacAcinimDXF
+
+
+BİLİNEN SINIRLAR
+----------------
+- Intel işlemcili Mac'lerde gerçek şekil dizimi paketi (ironnest) kurulamıyor; parçalar dikdörtgen olarak
+  dizilir. Apple çipli Mac'lerde ve Windows'ta sorun yok.
+- Windows kurulumu henüz gerçek bir Windows bilgisayarda denenmedi. Bir hata çıkarsa pencerenin ekran
+  görüntüsünü al ve GitHub'da bir issue aç; ayrıntılar eklenti klasöründeki _install.log'da.
+- Lazerde PVC / foreks kesme: zehirli klor gazı çıkar. Eklentinin malzeme listesinde bu yüzden yok.
+
+Bu yazılım "olduğu gibi", hiçbir garanti olmadan sunulur (MIT Lisansı). Kesmeden önce her DXF'in ölçüsünü
+kontrol et; kestiğin şeyden ve lazeri güvenli kullanmaktan sen sorumlusun.

@@ -1,0 +1,68 @@
+FUSION SHEET METAL NESTING — installation
+=========================================
+
+What it does: flattens the visible sheet metal bodies in Fusion, writes a DXF per part and nests them all on
+sheets. For sheet metal and for model making (card, foam board, acrylic, wood): laser-ready cut files, PNG
+previews, scrap figures and an optional cost estimate.
+
+You need: Autodesk Fusion (opened at least once) and an internet connection. Setup takes 3-5 minutes and about
+300-400 MB of disk space. No admin password; no separate Python install — the installer brings its own.
+
+
+MAC
+---
+1. Double-click the downloaded zip; a folder opens next to it.
+2. Double-click "Install-Mac.command" in that folder.
+3. The first time, macOS says it cannot verify the developer (the file is not signed):
+     - Click "Done" / "OK".
+     - Open System Settings > Privacy & Security, scroll down to "Install-Mac.command was blocked" and click
+       "Open Anyway"; enter your Mac password if asked.
+     - Double-click Install-Mac.command again and click "Open".
+4. A Terminal window runs the setup by itself. When it says "SETUP COMPLETE", press Enter.
+5. Restart Fusion if it is open.
+
+
+WINDOWS
+-------
+1. Right-click the zip > "Extract All" > "Extract". (Do not run it from inside the zip; that does not work.)
+2. Double-click "Install-Windows.bat" in the extracted folder.
+3. If "Windows protected your PC" appears: "More info" > "Run anyway".
+4. A black window runs the setup by itself. When it says "SETUP COMPLETE", press a key.
+5. Restart Fusion if it is open.
+
+
+USING IT
+--------
+The "Sheet Metal Nesting DXF" button is on the SHEET METAL tab (also under UTILITIES > ADD-INS).
+With a sheet metal design open, click it, choose the settings and press OK.
+Output: Documents > Fusion_SheetMetal_DXF > <document name>_<date>
+Hover over any setting to see what it does. Language: "Dil / Language" at the top of the dialog.
+Full guide (step by step, laser colours, scrap and cost, troubleshooting): USER_GUIDE.pdf
+
+No button? UTILITIES > ADD-INS > Scripts and Add-Ins > Add-Ins tab: select "SacAcinimDXF", click "Run" and tick
+"Run on Startup".
+
+
+UPDATING
+--------
+Unzip the new release and run the installer again. Your settings and prices are kept.
+The version you use is shown at the bottom of the add-in's dialog.
+
+
+REMOVING
+--------
+Close Fusion and delete this folder:
+  Mac:     ~/Library/Application Support/Autodesk/Autodesk Fusion 360/API/AddIns/SacAcinimDXF
+  Windows: %APPDATA%\Autodesk\Autodesk Fusion 360\API\AddIns\SacAcinimDXF
+
+
+KNOWN LIMITS
+------------
+- On Intel Macs the true-shape nesting package (ironnest) is not available; parts are nested as rectangles.
+  Apple-silicon Macs and Windows are fine.
+- The Windows installer has not been tested on a real Windows PC yet. If something fails, take a screenshot
+  of the window and open an issue on GitHub; details are in _install.log inside the add-in folder.
+- Never laser-cut PVC / Forex: it gives off toxic chlorine gas. That is why it is not in the material list.
+
+This software is provided "as is", without warranty of any kind (MIT License). Check every DXF's dimensions
+before cutting; you are responsible for what you cut and for using your laser safely.
