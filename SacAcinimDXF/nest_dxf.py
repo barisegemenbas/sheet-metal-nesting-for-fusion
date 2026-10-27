@@ -101,6 +101,27 @@ def poly_area(pts):
     return abs(sum(x0 * y1 - x1 * y0 for (x0, y0), (x1, y1) in zip(pts, pts[1:] + pts[:1]))) / 2
 
 
+def fill_slots(outline, width):
+    # Outline for packing only: slots narrower than `width` (e.g. half-lap slots thinner than the part spacing) are
+    # filled. The packers grow every part by the spacing, which pinches such a slot shut and makes the part fail as
+    # "larger than the sheet". Nothing can go into a slot that narrow anyway; the cut geometry keeps its slots.
+    try:
+        from shapely.geometry import Polygon
+    except Exception:
+        return outline
+    r = width / 2 + 0.05
+    try:
+        p = Polygon(outline).buffer(r, join_style=2, mitre_limit=10).buffer(-r, join_style=2, mitre_limit=10)
+        if p.geom_type != 'Polygon' or p.is_empty or not p.is_valid: return outline
+        pts = [(x, y) for x, y in p.simplify(0.01).exterior.coords[:-1]]
+    except Exception:
+        return outline
+    if len(pts) < 3: return outline
+    orient = lambda q: sum(x0 * y1 - x1 * y0 for (x0, y0), (x1, y1) in zip(q, q[1:] + q[:1]))
+    if (orient(pts) > 0) != (orient(outline) > 0): pts.reverse()  # keep the winding the packers were given
+    return pts
+
+
 def loops(ents, tol=0.2):
     # every closed contour among the entities as a polygon (mm): closed entities as they are, loose lines/arcs chained
     polys = []
@@ -791,6 +812,8 @@ def nest(cfg, parts, out_path, sw, sh, styles, info=None, maket=None, sizes=None
     msp = out.modelspace()
     # parts nested edge to edge: arcs flattened finely, or a chord's bulge could cross into the neighbour
     types = load_parts({'parts': parts}, out, 0.02 if merge else 0.2)
+    if sep > 0:
+        for t in types: t['outline'] = fill_slots(t['outline'], sep)
     for layer, s in styles.items():  # load_parts adds the part layers in default white
         if layer in out.layers:
             out.layers.get(layer).color = s['color']
